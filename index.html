@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPF Gemenskap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #a0c4ff, #bdb2ff);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    nav a {
+      text-decoration: none;
+      color: #4f4f4f;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      background: #e0e0e0;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #cbb3ff;
+      color: white;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      position: relative;
+      padding: 5rem 1rem;
+      color: #333;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.75);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #a0c4ff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background: #6a92ff;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #5e60ce;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .cta {
+      display: inline-block;
+      background: #bdb2ff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    footer {
+      background: #5e60ce;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NPF Gemenskap</h1>
+    <p>För trygghet, förståelse och gemenskap inom NPF – oavsett ålder</p>
+  </header>
+
+  <nav>
+    <a href="#start">Start</a>
+    <a href="#om">Om oss</a>
+    <a href="#kalender">Kalender</a>
+    <a href="#galleri">Galleri</a>
+    <a href="#tips">Tips & Stöd</a>
+    <a href="#medlemskap">Medlemskap</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <section class="hero" id="start">
+    <div class="hero-content">
+      <h1>Välkommen till NPF Gemenskap</h1>
+      <p>En plats för alla som vill dela erfarenheter, hitta stöd och bygga gemenskap kring neuropsykiatriska funktionsvariationer.</p>
+      <div class="buttons">
+        <a href="#medlemskap">Bli medlem</a>
+        <a href="#stotta">Stöd oss</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="om">
+  <h2>Om föreningen</h2>
+  <p>NPF Gemenskap är en ideell förening som verkar för att skapa trygghet, stöd och glädje i vardagen för personer med neuropsykiatriska funktionsvariationer och deras anhöriga. Vi tror på gemenskap, enkelhet och respekt för allas olikheter och unika styrkor.</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+    <div style="border: 2px solid #b197fc; padding: 1.5rem; border-radius: 10px; background: white;">
+      <h3>Alla människor är unika och bär på styrkor och förmågor</h3>
+      <p>Att ha en neuropsykiatrisk funktionsnedsättning eller vara anhörig kan vara kämpigt, och hela familjen kan behöva stöd och hjälp – men det finns också massor av styrkor att lyfta.</p>
+    </div>
+    <div style="border: 2px solid #b197fc; padding: 1.5rem; border-radius: 10px; background: white;">
+      <h3>Gemenskap gör skillnad</h3>
+      <p>Vi vet hur viktigt det är att få känna samhörighet och ha en plats där man är välkommen precis som man är. Därför skapar vi träffar och aktiviteter för alla åldrar.</p>
+    </div>
+    <div style="border: 2px solid #b197fc; padding: 1.5rem; border-radius: 10px; background: white;">
+      <h3>Vårt mål</h3>
+      <p>Att skapa förståelse, minska utanförskap och stötta föräldrar, ungdomar och vuxna inom NPF-spektrumet genom konkreta aktiviteter, tips och närvaro.</p>
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="kalender">
+    <h2>Kommande träffar</h2>
+    <ul>
+      <li>🗓️ Föräldraträff – 12 juni, kl 18.00, i lokalen på Gatan 5</li>
+      <li>🗓️ Pysselkväll – 20 juni, kl 17.30, öppet för hela familjen</li>
+      <li>🗓️ Picknick i parken – 5 juli, kl 14.00, ta med egen filt och fika</li>
+    </ul>
+  </section>
+
+  <section class="section" id="galleri">
+  <h2>Galleri</h2>
+  <p>Se fler bilder och uppdateringar direkt i vår Facebookgrupp!</p>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem;">
+    <a href="https://www.facebook.com/groups/npfgemenskap" target="_blank" style="text-decoration: none; color: white; background-color: #4267B2; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: bold;">📷 Besök vårt fotoflöde på Facebook</a>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fgroups%2Fnpfgemenskap&tabs=timeline&width=500&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="500" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  </div>
+</section>
+
+  <section class="section" id="tips">
+    <h2>Tips & Stöd</h2>
+    <ul>
+      <li><a href="#">📘 Guide till att söka stöd i skolan</a></li>
+      <li><a href="#">💡 Bidrag du kan söka som NPF-förälder</a></li>
+      <li><a href="#">🔗 Länkar till föreningar, habilitering och mer</a></li>
+    </ul>
+  </section>
+
+  <section class="section" id="medlemskap">
+  <h2>Medlemskap</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+    <div style="border: 2px solid #b197fc; padding: 1.5rem; border-radius: 10px; background: white;">
+      <h3>Att vara stödmedlem</h3>
+      <p>Som stödmedlem får du nyhetsbrev, inbjudningar och möjligheten att bidra till gemenskap utan att betala något. Det är ett fint sätt att visa att du stöttar oss.</p>
+    </div>
+    <div style="border: 2px solid #b197fc; padding: 1.5rem; border-radius: 10px; background: white;">
+      <h3>Att vara betalande medlem</h3>
+      <ul>
+        <li>Förtur till aktiviteter</li>
+        <li>Medlemsrabatt på vissa evenemang</li>
+        <li>Inblick i föreningens arbete</li>
+        <li>100 kr/år – ett viktigt bidrag till fortsatt verksamhet</li>
+      </ul>
+    </div>
+    <div style="border: 2px solid #b197fc; padding: 1.5rem; border-radius: 10px; background: white; text-align: center;">
+      <h3>Bli medlem idag</h3>
+      <p>Välj det medlemskap som passar dig och bli en del av vår gemenskap.</p>
+      <a href="#" class="cta">Ansök om medlemskap</a>
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="kontakt">
+    <h2>Kontakt</h2>
+    <p>📧 Mejla oss på <a href="mailto:kontakt@npfgemenskap.se">kontakt@npfgemenskap.se</a></p>
+    <p>📍 Vi håller till i [din ort här]</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NPF Gemenskap – Tillsammans gör vi skillnad</p>
+  </footer>
+</body>
+</html>
