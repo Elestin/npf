@@ -171,14 +171,44 @@
   </div>
 </section>
 
-  
-    <div style="margin: 2rem auto; max-width: 800px;">
+<section class="section" id="kalender">
+  <h2>Kommande träffar</h2>
+  <ul>
+    <li>🗓️ Föräldraträff – 12 juni, kl 18.00, i lokalen på Gatan 5</li>
+    <li>🗓️ Pysselkväll – 20 juni, kl 17.30, öppet för hela familjen</li>
+    <li>🗓️ Picknick i parken – 5 juli, kl 14.00, ta med egen filt och fika</li>
+  </ul>
+
+  <div id="event-feed" style="margin: 2rem 0;"></div>
+
   <iframe src="https://calendar.google.com/calendar/embed?src=8f050f0922c3f43af930e21849570768aa02ce212cd386830fce7698ff1d4f6e%40group.calendar.google.com&ctz=Europe%2FStockholm" style="border: 1px solid #ccc; width: 100%; height: 600px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" frameborder="0" scrolling="no"></iframe>
       <p style="font-size: 0.9rem; text-align: center; color: #555;">Vill du lägga till ett evenemang? <a href="mailto:kontakt@npfgemenskap.se">Kontakta oss</a></p>
     </div>
   </section>
 
-  <section class="section" id="galleri">
+  <script>
+    async function fetchEvents() {
+      const response = await fetch('https://www.googleapis.com/calendar/v3/calendars/8f050f0922c3f43af930e21849570768aa02ce212cd386830fce7698ff1d4f6e@group.calendar.google.com/events?key=AIzaSyCPbMxJeK707zbO5ZpijtulCGUXkkDt6Hw&orderBy=startTime&singleEvents=true&timeMin=' + new Date().toISOString());
+      const data = await response.json();
+      const container = document.getElementById('event-feed');
+
+      if (data.items && data.items.length > 0) {
+        const list = document.createElement('ul');
+        data.items.slice(0, 5).forEach(event => {
+          const li = document.createElement('li');
+          const date = new Date(event.start.dateTime || event.start.date);
+          li.textContent = `📌 ${event.summary} – ${date.toLocaleDateString()} kl ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+          list.appendChild(li);
+        });
+        container.appendChild(list);
+      } else {
+        container.innerHTML = '<p>Inga kommande händelser just nu.</p>';
+      }
+    }
+    fetchEvents();
+  </script>
+
+<section class="section" id="galleri">
   <h2>Galleri</h2>
   <p>Se fler bilder och uppdateringar direkt i vår Facebookgrupp!</p>
   <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem;">
